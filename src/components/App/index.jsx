@@ -21,9 +21,11 @@ class App extends Component {
       <div className='App'>
           <StoryTopContainer data={Story.top} />
           <div className='Story'>
-                      <p className="Paragraph" style={{fontStyle: 'italic'}}>The Express-News also produced <a href="http://www.expressnews.com/40-days-mourning-photo-essay/" style={{color: '#0000ee'}}>a photo essay following Mohamed's family</a> after his death.</p>
+                      <p className="Paragraph" style={{fontStyle: 'italic'}}>The Express-News also produced <a href="http://www.expressnews.com/40-days-mourning-photo-essay/" style={{color: '#0000ee'}}>a photo essay following Mohamad's family</a> after his death.</p>
             <Sections sections={Story.sections}/>
+            <p className="Paragraph" style={{fontStyle: 'italic'}}>Correction: an earlier version of this story misspelled the Mohamad family's name.</p>
             <SubscribeFooter link='https://myaccount.expressnews.com/dssSubscribe.aspx?pid=892&z=00000'/>
+
           </div>
       </div>
     );
