@@ -54,7 +54,7 @@ module.exports = {
   devtool: 'source-map',
   // In production, we only want to load the polyfills and the app code.
   entry: [
-    'babel-polyfill',
+    // 'babel-polyfill',
     require.resolve('./polyfills'),
     paths.appIndexJs
   ],
@@ -87,7 +87,7 @@ module.exports = {
       'react-native': 'react-native-web'
     }
   },
-  
+
   module: {
     // First, run the linter.
     // It's important to do this before Babel processes the JS.
@@ -127,7 +127,7 @@ module.exports = {
         test: /\.(js|jsx)$/,
         include: paths.appSrc,
         loader: 'babel',
-        
+
       },
       // The notation here is somewhat confusing.
       // "postcss" loader applies autoprefixer to our CSS.
@@ -151,7 +151,7 @@ module.exports = {
         // Note: this won't work without `new ExtractTextPlugin()` in `plugins`.
       },
       // Sass, son
-      {  
+      {
         test: /\.scss$/,
         loader: 'style!css!sass?outputStyle=compressed&' +
         'includePaths[]=' +
@@ -160,8 +160,8 @@ module.exports = {
         )) +
         '&includePaths[]=' +
         (encodeURIComponent(
-            path.resolve( process.cwd(),
-              './node_modules/grommet/node_modules'))
+          path.resolve(process.cwd(),
+            './node_modules/grommet/node_modules'))
         )
       },
       // JSON is not enabled by default in Webpack but both Node and Browserify
@@ -188,9 +188,9 @@ module.exports = {
       './node_modules'
     ]
   },
-  
+
   // We use PostCSS for autoprefixing only.
-  postcss: function() {
+  postcss: function () {
     return [
       autoprefixer({
         browsers: [
